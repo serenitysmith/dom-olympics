@@ -65,7 +65,11 @@ document.querySelector('#send-btn').addEventListener('click', function(e) {
     counter++;
     document.querySelector('.messages').appendChild(newDiv);
 })
+// ask michael
+// added more messages using the form at the bottom.
 
+
+//Every other message will be posted on the right in one color, and the next on the left the other color.
 
 
 
