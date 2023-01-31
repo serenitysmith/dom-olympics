@@ -79,15 +79,16 @@ document.querySelector('#send-btn').addEventListener('click', function(e) {
     var newMsgText = document.createTextNode(document.querySelector('#input').value);
     //appened new messages to parent element newMsg
     newDiv.appendChild(newMsgText);
-    // added messages to newDiv
+    // added messages to newDiv 
     newDiv.classList.add('message');
     if (counter % 2 === 0) {
-        // adding messages to the left
+        // checking if counter is %2 0 or not, if it is, its added to class left 
         newDiv.classList.add('left')
     } else {
-        // adding ,messages to the right
+        // adding ,messages to the right if remainder is more than 0
         newDiv.classList.add('right')
     }
+    //makes sure next message added doesnt shpw on opposite side
     counter++;
     document.querySelector('.messages').appendChild(newDiv);
 })
