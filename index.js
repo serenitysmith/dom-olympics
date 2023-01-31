@@ -52,32 +52,40 @@ dropDown.addEventListener('change', function () {
         for (var i = 0; i < leftMessages.length; i++) {
             leftMessages[i].style.backgroundColor = 'blue'
         }
-        // iterated over rigth messages to make them brown
+        // iterated over right messages to make them brown
         for (var i = 0; i < rightMessages.length; i++) {
+            //styled right messages to be brown
             rightMessages[i].style.backgroundColor = 'brown'
         }
     }
     // 
     if (dropDown.value == 'theme-two') {
+        // if drop down is is themme two color is red for left
         for (var i = 0; i < leftMessages.length; i++) {
             leftMessages[i].style.backgroundColor = 'red'
         }
+        // if drop down is is themme two color is black for right
         for (var i = 0; i < rightMessages.length; i++) {
             rightMessages[i].style.backgroundColor = 'black'
         }
     }
 })
 var counter = 2;
-
+// event lsitener for send button
 document.querySelector('#send-btn').addEventListener('click', function(e) {
     e.preventDefault();
     var newDiv = document.createElement('div');
+    // created new input
     var newMsgText = document.createTextNode(document.querySelector('#input').value);
+    //appened new messages to parent element newMsg
     newDiv.appendChild(newMsgText);
+    // added messages to newDiv
     newDiv.classList.add('message');
     if (counter % 2 === 0) {
+        // adding messages to the left
         newDiv.classList.add('left')
     } else {
+        // adding ,messages to the right
         newDiv.classList.add('right')
     }
     counter++;
